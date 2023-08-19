@@ -618,11 +618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7695465648676368945, guid: 5052a6b44c6ea814797cc96e89855754, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7695465648676368945, guid: 5052a6b44c6ea814797cc96e89855754, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.48
+      value: 101.5
       objectReference: {fileID: 0}
     - target: {fileID: 7695465648676368945, guid: 5052a6b44c6ea814797cc96e89855754, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1041,7 +1041,6 @@ GameObject:
   - component: {fileID: 2021665627}
   - component: {fileID: 2021665628}
   - component: {fileID: 2021665629}
-  - component: {fileID: 2021665630}
   - component: {fileID: 2021665632}
   - component: {fileID: 2021665633}
   m_Layer: 0
@@ -1108,7 +1107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2135585597343286014, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
-  m_Color: {r: 0.5943396, g: 0.30501956, b: 0.30501956, a: 1}
+  m_Color: {r: 0.5849056, g: 0.44336933, b: 0.3884656, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1214,21 +1213,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2021665630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021665626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f8e62dde0b0814cbc9cba105071365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 3f0df649bf94e544d8adcf8d07ff41aa, type: 3}
-  source: {fileID: 2021665629}
-  delayFramesDefault: 30
 --- !u!50 &2021665632
 Rigidbody2D:
   serializedVersion: 4
@@ -1542,5 +1526,5 @@ SceneRoots:
   - {fileID: 1973636449}
   - {fileID: 2093958029}
   - {fileID: 2107826944}
-  - {fileID: 2036449559}
   - {fileID: 1421067020}
+  - {fileID: 2036449559}
