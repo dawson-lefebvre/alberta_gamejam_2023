@@ -27,10 +27,33 @@ public class PlayerBehaviour : MonoBehaviour
         playerControls.Disable();
     }
 
-    public float speed = 1;
+    private void Update()
+    {
+        Debug.Log(rb.velocity.magnitude);
+    }
+
+    public float acceleration = 1;
+    public float maxSpeed = 10;
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = playerControls.Player.Move.ReadValue<Vector2>() * speed;
+        if(playerControls.Player.Move.ReadValue<Vector2>() != Vector2.zero)
+        {
+            rb.AddForce(playerControls.Player.Move.ReadValue<Vector2>() * acceleration);
+
+        }
+        else
+        {
+            rb.AddForce(-rb.velocity.normalized *  acceleration);
+        }
+
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
+        else if (rb.velocity.magnitude < -maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * -maxSpeed;
+        }
     }
 }
