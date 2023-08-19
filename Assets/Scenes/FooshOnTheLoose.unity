@@ -259,9 +259,9 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 0.09732437, y: -0.2449553, z: 0}
-      leftTangent: {x: -0.17529297, y: 0.0051398277, z: 0}
-      rightTangent: {x: 0.92154384, y: -0.027020931, z: 0}
+    - position: {x: -0.8462637, y: -0.18894328, z: 0}
+      leftTangent: {x: -0.17529303, y: 0.005139798, z: 0}
+      rightTangent: {x: 0.92154574, y: -0.027020887, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_WorldSpaceUV: 0
   m_CornerAngleThreshold: 30
   m_ColliderDetail: 16
-  m_ColliderOffset: 0
+  m_ColliderOffset: -0.5
   m_UpdateCollider: 1
   m_EnableTangents: 0
   m_GeometryCached: 0
@@ -284,8 +284,9 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -2.199985, y: -0.17742546}
-  - {x: 0.3471791, y: -0.25353432}
+  - {x: -2.1997538, y: -0.43954945}
+  - {x: -0.8523885, y: -0.43886825}
+  - {x: -0.6036658, y: -0.4449606}
 --- !u!1971053207 &896529550
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -342,8 +343,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.9228554, y: -0.20991635, z: 0}
-    m_Extent: {x: 1.2773764, y: 0.29301077, z: 0}
+    m_Center: {x: -1.394629, y: -0.18225515, z: 0}
+    m_Extent: {x: 0.80561733, y: 0.26270545, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &896529551
 Transform:
@@ -354,9 +355,9 @@ Transform:
   m_GameObject: {fileID: 896529546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3878653, y: -3.0336032, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.31, y: -1.94, z: 0}
+  m_LocalScale: {x: 2.16, y: 2.16, z: 2.16}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -393,10 +394,11 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.27
+  m_EdgeRadius: 0.64
   m_Points:
-  - {x: -2.199985, y: -0.17742546}
-  - {x: 0.3471791, y: -0.25353432}
+  - {x: -2.1997538, y: -0.43954945}
+  - {x: -0.8523885, y: -0.43886825}
+  - {x: -0.6036658, y: -0.4449606}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
