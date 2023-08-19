@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TractorBeam
+  - CowBox
   layers:
   - Default
   - TransparentFX
