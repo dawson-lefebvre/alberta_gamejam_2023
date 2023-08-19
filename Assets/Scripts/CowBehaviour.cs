@@ -30,4 +30,14 @@ public class CowBehaviour : MonoBehaviour
             rb.velocity = rb.velocity.normalized * -maxSpeed;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "CowBox")
+        {
+            Destroy(gameObject);
+            Globals.score++;
+            Globals.cowsLeft--;
+        }
+    }
 }
