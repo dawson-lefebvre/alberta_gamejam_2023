@@ -14,6 +14,7 @@ public class SFXCollide : MonoBehaviour
     {
         //source.playOnAwake = false; doeant work like that, just turn it off
         delayFrames = delayFramesDefault;
+        source.clip = clip;
     }
 
     private void FixedUpdate()

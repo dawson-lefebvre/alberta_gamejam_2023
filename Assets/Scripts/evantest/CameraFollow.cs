@@ -40,10 +40,7 @@ public class CameraFollow : MonoBehaviour
         {
             cameraObj.transform.position = new Vector3(cameraPos.x, targetPos.y, cameraPos.z);
 
-            Debug.Log("WAHHH");
         }
-        Debug.Log(cameraMain.orthographicSize);
-        Debug.Log($"{Floor} .... {Ceiling}");
 
     }
 }
