@@ -36,6 +36,8 @@ public class CowBehaviour : MonoBehaviour
         if(collision.tag == "CowBox")
         {
             Destroy(gameObject);
+            Globals.score++;
+            Globals.cowsLeft--;
         }
     }
 }
