@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FloppyIdea : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class FloppyIdea : MonoBehaviour
     Rigidbody2D Rigidbody;
     void Start()
     {
-     Rigidbody = GetComponent<Rigidbody2D>();   
+        Rigidbody = GetComponent<Rigidbody2D>();   
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class FloppyIdea : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Rigidbody.AddForceAtPosition(Direction.transform.position - LeftCorner.transform.position * flopForce, LeftCorner.transform.position, ForceMode2D.Impulse);
+            Rigidbody.AddForce((Camera.main.ScreenToWorldPoint(Input.mousePosition) - gameObject.transform.position).normalized * flopForce, ForceMode2D.Impulse);
         }
         else if (Input.GetMouseButtonDown(1))
         {

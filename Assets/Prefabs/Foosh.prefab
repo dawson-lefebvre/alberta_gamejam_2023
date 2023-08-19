@@ -164,7 +164,7 @@ MonoBehaviour:
   LeftCorner: {fileID: 243540644745268322}
   RightCorner: {fileID: 6353814103140203413}
   Direction: {fileID: 5607748278293685981}
-  flopForce: 1.91
+  flopForce: 7.89
 --- !u!70 &6311463500916757919
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
