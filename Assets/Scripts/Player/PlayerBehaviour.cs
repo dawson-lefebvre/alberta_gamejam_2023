@@ -6,6 +6,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
     PlayerControls playerControls;
     Rigidbody2D rb;
+    [SerializeField]GameObject beam;
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,7 +30,14 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(rb.velocity.magnitude);
+        if (playerControls.Player.Tract.IsPressed())
+        {
+            beam.SetActive(true);
+        }
+        else
+        {
+            beam.SetActive(false);
+        }
     }
 
     public float acceleration = 1;
