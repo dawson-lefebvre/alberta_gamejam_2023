@@ -14,15 +14,17 @@ public class FloppyIdea : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    public float flopForce = 1;
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Rigidbody.AddForceAtPosition(Direction.transform.position - LeftCorner.transform.position, LeftCorner.transform.position, ForceMode2D.Impulse);
+            Rigidbody.AddForceAtPosition(Direction.transform.position - LeftCorner.transform.position * flopForce, LeftCorner.transform.position, ForceMode2D.Impulse);
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            Rigidbody.AddForceAtPosition(Direction.transform.position - RightCorner.transform.position, RightCorner.transform.position, ForceMode2D.Impulse);
+            Rigidbody.AddForceAtPosition(Direction.transform.position - RightCorner.transform.position * flopForce, RightCorner.transform.position, ForceMode2D.Impulse);
         }
     }
 }
