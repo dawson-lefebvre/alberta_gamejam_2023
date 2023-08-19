@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4633728800209278480}
   - component: {fileID: 8357733221753761817}
   - component: {fileID: 3467498511908622211}
+  - component: {fileID: 3744935365335862031}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -164,6 +165,14 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0013918908, y: -0.025194231}
   m_Size: {x: 1.0971929, y: 0.79906404}
   m_Direction: 1
+--- !u!81 &3744935365335862031
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016004942444175222}
+  m_Enabled: 1
 --- !u!1 &8356610719534210738
 GameObject:
   m_ObjectHideFlags: 0
