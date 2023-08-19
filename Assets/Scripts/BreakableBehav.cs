@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BreakableBehav : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.tag == "Breaker")
+        {
+            //"Unlock" a bunch of broken pieces that lose all collision and fall off screen
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Update, if y <-100 then disable
+
 }
