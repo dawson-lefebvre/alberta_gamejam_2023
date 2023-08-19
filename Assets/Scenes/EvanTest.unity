@@ -659,8 +659,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1127299585251462066, guid: 5052a6b44c6ea814797cc96e89855754, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1421067022}
   m_SourcePrefab: {fileID: 100100000, guid: 5052a6b44c6ea814797cc96e89855754, type: 3}
+--- !u!1 &1421067021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1127299585251462066, guid: 5052a6b44c6ea814797cc96e89855754, type: 3}
+  m_PrefabInstance: {fileID: 1421067020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1421067022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421067021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f8e62dde0b0814cbc9cba105071365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3f0df649bf94e544d8adcf8d07ff41aa, type: 3}
+  source: {fileID: 0}
+  delayFramesDefault: 30
 --- !u!1 &1675678550
 GameObject:
   m_ObjectHideFlags: 0
