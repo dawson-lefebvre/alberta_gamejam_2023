@@ -5,12 +5,15 @@ using UnityEngine;
 public class EvanFishTest : MonoBehaviour
 {
     [SerializeField] HingeJoint2D hinge;
-    [SerializeField] KeyCode controlName;
-    [SerializeField] float paddleSpeed;
+    [SerializeField] float flopSpeed;
 
-    void Update()
+    private void Start()
     {
-        Flip(Input.GetKey(controlName)); ;
+        HingeJoint2D hinge = GetComponent<HingeJoint2D>();
+        JointMotor2D motor = hinge.motor;
+        motor.motorSpeed = flopSpeed;
+
+        //hinge.motor.motorSpeed = flopSpeed; *ERROR*
     }
 
     public void Flip(bool isPressed)

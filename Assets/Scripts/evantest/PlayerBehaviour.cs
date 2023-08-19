@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] EvanFishTest tailMove;
+    [SerializeField] EvanFishTest headMove;
 
-    // Update is called once per frame
+    [SerializeField] Key useLeft;
+    [SerializeField] Key useRight;
+
     void Update()
     {
-        
+        tailMove.Flip(Input.GetAxis("TailFlop") > 0);
+        headMove.Flip(Input.GetAxis("HeadFlop") > 0);
     }
 }
