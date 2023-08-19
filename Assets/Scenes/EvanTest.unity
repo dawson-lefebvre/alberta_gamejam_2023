@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161b3832e26fe5041b65e7a35c35a23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tailMove: {fileID: 0}
+  headMove: {fileID: 0}
+  useLeft: 0
+  useRight: 0
 --- !u!4 &230628140
 Transform:
   m_ObjectHideFlags: 0
@@ -632,8 +636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hinge: {fileID: 303241225}
-  controlName: 113
-  paddleSpeed: 100
+  flopSpeed: 0
 --- !u!1 &942963278
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,9 +768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc2b4cd0ad73f4685c0cc599645191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hinge: {fileID: 0}
-  controlName: 0
-  paddleSpeed: 0
+  hinge: {fileID: 942963280}
+  flopSpeed: -100
 --- !u!1 &1259748320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,8 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hinge: {fileID: 0}
-  controlName: 0
-  paddleSpeed: 0
+  flopSpeed: 0
 --- !u!1 &1570979329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,8 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hinge: {fileID: 942963280}
-  controlName: 101
-  paddleSpeed: 100
+  flopSpeed: 0
 --- !u!1 &2107299686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,8 +1524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hinge: {fileID: 0}
-  controlName: 0
-  paddleSpeed: 0
+  flopSpeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
