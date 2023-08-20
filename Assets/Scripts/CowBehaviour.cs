@@ -54,25 +54,34 @@ public class CowBehaviour : MonoBehaviour
     {
         if(collision.tag == "CowBox") //Adds one to cows rescued and subtracts one from cows remaining after destroying itself
         {
-            Destroy(gameObject);
+            source.clip = collectionClip;
+            source.Play();
+
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
+            //GetComponent<Rigidbody2D>(). = false;
+
+
+
+
             Globals.cowsRescued++;
             Globals.cowsRemaining--;
-
-            if (FXDelayFrames <= 0) 
-            {
-                source.clip = bonkClip;
-                source.Play();
-                FXDelayFrames = FXDelayFramesDefault; 
-            };
         }
         else if(collision.tag == "KillBox") //Adds one to cows lost and subtracts one from cows remaining after destroying itself
         {
             Destroy(gameObject);
             Globals.cowsLost++;
             Globals.cowsRemaining--;
+        }
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (FXDelayFrames <= 0)
+        {
             source.clip = bonkClip;
             source.Play();
-        }
+            FXDelayFrames = FXDelayFramesDefault;
+        };
     }
 }
