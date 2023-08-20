@@ -166,7 +166,8 @@ MonoBehaviour:
   bonkClip: {fileID: 8300000, guid: 3f0df649bf94e544d8adcf8d07ff41aa, type: 3}
   collectionClip: {fileID: 8300000, guid: 26ce42249feb8d94b9628a83c2e87e56, type: 3}
   source: {fileID: 444753606110116132}
-  FXDelayFramesDefault: 30
+  FXDelayFramesDefault: 100
+  flingForce: 1
   pullForce: 20
   maxSpeed: 2
 --- !u!82 &444753606110116132
