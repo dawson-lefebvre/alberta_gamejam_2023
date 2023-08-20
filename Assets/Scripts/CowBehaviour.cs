@@ -36,8 +36,14 @@ public class CowBehaviour : MonoBehaviour
         if(collision.tag == "CowBox")
         {
             Destroy(gameObject);
-            Globals.score++;
-            Globals.cowsLeft--;
+            Globals.cowsRescued++;
+            Globals.cowsRemaining--;
+        }
+        else if(collision.tag == "KillBox")
+        {
+            Destroy(gameObject);
+            Globals.cowsLost++;
+            Globals.cowsRemaining--;
         }
     }
 }
