@@ -17,6 +17,9 @@ public class MothershipFollow : MonoBehaviour
     public float maxDistance = 5;
     public float moveSpeed = 5;
 
+
+    public int animationDelay = 20;
+    int animationDelayFrames = -1;
     void FixedUpdate()
     {
         if (UFO.transform.position.y - gameObject.transform.position.y > maxDistance) //Sets the MotherShip to move upwards at moveSpeed if the difference in y positions between the player and mother ship is greater than the distance
@@ -32,10 +35,24 @@ public class MothershipFollow : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
         }
+
+        if(animationDelayFrames > 0)
+        {
+            animationDelayFrames--;
+        }
+        else if(animationDelayFrames == 0)
+        {
+            animator.Play("MotherShipThumbsReverse");
+            animationDelayFrames--;
+        }
     }
 
     public void ThumbsUp()
     {
-        animator.Play("MotherShipThumbs");
+        if (animationDelayFrames < 0)
+        {
+            animator.Play("MotherShipThumbs");
+            animationDelayFrames = animationDelay;
+        }
     }
 }

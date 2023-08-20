@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CowBoxBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject MotherShip;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.tag == "Cow")
+        {
+            MotherShip.GetComponent<MothershipFollow>().ThumbsUp();
+        }
     }
 }

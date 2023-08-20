@@ -14,13 +14,16 @@ public class CowBehaviour : MonoBehaviour
 
     [SerializeField] int FXDelayFramesDefault = 30;
     int FXDelayFrames;
-
+    public float flingForce = 1;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-
         FXDelayFrames = FXDelayFramesDefault;
+        rb.AddForce(new Vector2(UnityEngine.Random.Range(-1f,1f), UnityEngine.Random.Range(-1f, 1f)).normalized * flingForce, ForceMode2D.Impulse);
     }
 
     public float pullForce = 5;
