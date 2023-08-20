@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,10 +60,9 @@ public class CowBehaviour : MonoBehaviour
 
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
-            //GetComponent<Rigidbody2D>(). = false;
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 
-
-
+            Invoke("SelfDestruct", 1);
 
             Globals.cowsRescued++;
             Globals.cowsRemaining--;
@@ -75,6 +75,11 @@ public class CowBehaviour : MonoBehaviour
         }
     }
 
+    private void SelfDestruct()
+    {
+        enabled = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (FXDelayFrames <= 0)
@@ -84,4 +89,6 @@ public class CowBehaviour : MonoBehaviour
             FXDelayFrames = FXDelayFramesDefault;
         };
     }
+
+
 }
