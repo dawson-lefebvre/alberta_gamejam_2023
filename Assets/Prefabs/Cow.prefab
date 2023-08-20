@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8556571549632883297}
   - component: {fileID: 8821015826046194491}
   - component: {fileID: 8883109542875402235}
-  - component: {fileID: 2789835828290123912}
   - component: {fileID: 444753606110116132}
   m_Layer: 0
   m_Name: Cow
@@ -105,7 +104,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d53f1515e5685374985b2efd90de9298, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -164,23 +163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullPosition: {fileID: 0}
+  bonkClip: {fileID: 8300000, guid: 3f0df649bf94e544d8adcf8d07ff41aa, type: 3}
+  collectionClip: {fileID: 8300000, guid: 26ce42249feb8d94b9628a83c2e87e56, type: 3}
+  source: {fileID: 444753606110116132}
+  FXDelayFramesDefault: 30
   pullForce: 20
   maxSpeed: 2
---- !u!114 &2789835828290123912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127299585251462066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f8e62dde0b0814cbc9cba105071365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 3f0df649bf94e544d8adcf8d07ff41aa, type: 3}
-  source: {fileID: 444753606110116132}
-  delayFramesDefault: 30
 --- !u!82 &444753606110116132
 AudioSource:
   m_ObjectHideFlags: 0
@@ -192,7 +180,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -201,10 +189,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 0
-  MinDistance: 8
-  MaxDistance: 16
+  MinDistance: 4.1441293
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -212,23 +200,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.35910797
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.0005720222
+      outSlope: 0.0005720222
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.63124996
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.1402893
+      inSlope: -2
+      outSlope: -2
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
