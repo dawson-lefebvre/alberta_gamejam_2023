@@ -6,9 +6,12 @@ public class MothershipFollow : MonoBehaviour
 {
     [SerializeField] GameObject UFO;
     Rigidbody2D rb;
+    Animator animator;
+    public AnimationClip thumbsUp;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     public float maxDistance = 5;
@@ -29,5 +32,10 @@ public class MothershipFollow : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
         }
+    }
+
+    public void ThumbsUp()
+    {
+        animator.Play("MotherShipThumbs");
     }
 }
