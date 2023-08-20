@@ -80,7 +80,7 @@ public class CowBehaviour : MonoBehaviour
 
     private void SelfDestruct()
     {
-        enabled = false;
+        gameObject.active = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
