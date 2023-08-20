@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuButtonBehaviours : MonoBehaviour
 {
@@ -12,8 +13,9 @@ public class MainMenuButtonBehaviours : MonoBehaviour
     }
 
     public void PlayGame()
-    { 
+    {
         //Will load first level or possibly level select screen
+        SceneManager.LoadScene(1);
     }
 
     public void HowToPlay()
