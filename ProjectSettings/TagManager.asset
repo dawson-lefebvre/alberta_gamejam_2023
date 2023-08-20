@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TractorBeam
   - CowBox
+  - KillBox
   layers:
   - Default
   - TransparentFX
