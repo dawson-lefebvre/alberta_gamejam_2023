@@ -5,7 +5,8 @@ using UnityEngine;
 public class CowBehaviour : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField]GameObject pullPosition;
+    [SerializeField]GameObject pullPosition; //Position to tract towards when caught in beam
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +15,14 @@ public class CowBehaviour : MonoBehaviour
 
     public float pullForce = 5;
     public float maxSpeed = 5;
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision) //Runs every frame that the cow is in a trigger
     {
-        if(collision.tag == "TractorBeam")
+        if(collision.tag == "TractorBeam") //Runs if the trigger is the tractor beam
         {
-            rb.AddForce((pullPosition.transform.position - gameObject.transform.position).normalized * pullForce);
+            rb.AddForce((pullPosition.transform.position - gameObject.transform.position).normalized * pullForce); //Gets the direction between the cow and the pull position, then applies a force in that direction to the cow
         }
 
+        //Speed limiter
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
@@ -33,13 +35,13 @@ public class CowBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "CowBox")
+        if(collision.tag == "CowBox") //Adds one to cows rescued and subtracts one from cows remaining after destroying itself
         {
             Destroy(gameObject);
             Globals.cowsRescued++;
             Globals.cowsRemaining--;
         }
-        else if(collision.tag == "KillBox")
+        else if(collision.tag == "KillBox") //Adds one to cows lost and subtracts one from cows remaining after destroying itself
         {
             Destroy(gameObject);
             Globals.cowsLost++;
