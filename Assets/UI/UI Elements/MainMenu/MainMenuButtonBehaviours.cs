@@ -7,6 +7,7 @@ public class MainMenuButtonBehaviours : MonoBehaviour
 {
     [SerializeField] GameObject mainMenuUI;
     [SerializeField] GameObject howToPlayUI;
+    [SerializeField] GameObject creditsUI;
     public void Quit()
     {
         Application.Quit();
@@ -24,9 +25,16 @@ public class MainMenuButtonBehaviours : MonoBehaviour
         howToPlayUI.SetActive(true);
     }
 
+    public void Credits()
+    {
+        mainMenuUI.SetActive(false);
+        creditsUI.SetActive(true);
+    }
+
     public void BackToMenu()
     {
         mainMenuUI.SetActive(true);
         howToPlayUI.SetActive(false);
+        creditsUI.SetActive(false);
     }
 }
