@@ -5,18 +5,25 @@ using UnityEngine;
 public class MothershipFollow : MonoBehaviour
 {
     [SerializeField] GameObject UFO;
-    [SerializeField] Rigidbody rb;
+    Rigidbody2D rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    public float distance = 5;
+    public float moveSpeed = 5;
+
     void FixedUpdate()
     {
-        if (UFO.transform.position.y - gameObject.transform.position.y > 5)
+        if (UFO.transform.position.y - gameObject.transform.position.y > distance)
         {
-            rb.velocity = new Vector2(0, -(10));
+            rb.velocity = new Vector2(0, moveSpeed);
 
     }
-        else if (UFO.transform.position.y - gameObject.transform.position.y < -5)
+        else if (UFO.transform.position.y - gameObject.transform.position.y < -distance)
         {
-            rb.velocity = new Vector2(0, 10);
-      
+            rb.velocity = new Vector2(0, -moveSpeed);
     }
         else
         {
