@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class MothershipFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject UFO;
+    [SerializeField] Rigidbody rb;
+    void FixedUpdate()
     {
-        
-    }
+        if (UFO.transform.position.y - gameObject.transform.position.y > 5)
+        {
+            rb.velocity = new Vector2(0, -(10));
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    }
+        else if (UFO.transform.position.y - gameObject.transform.position.y < -5)
+        {
+            rb.velocity = new Vector2(0, 10);
+      
+    }
+        else
+        {
+            rb.velocity = new Vector2(0,0);
+        }
     }
 }
