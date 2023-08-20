@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8383237257173762581}
   - component: {fileID: 2286935208796505493}
+  - component: {fileID: 6616735794029368462}
   m_Layer: 0
   m_Name: CowBox
   m_TagString: CowBox
@@ -81,6 +82,19 @@ PolygonCollider2D:
       - {x: -0.4383722, y: -0.1846354}
       - {x: -0.22562933, y: -0.13308084}
   m_UseDelaunayMesh: 0
+--- !u!114 &6616735794029368462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628063678530603054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb88d3f7f1674f4b9244b6bf2a9d03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MotherShip: {fileID: 7094272139936661107}
 --- !u!1 &7094272139936661107
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,8 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UFO: {fileID: 0}
-  distance: 5
+  thumbsUp: {fileID: 0}
+  maxDistance: 5
   moveSpeed: 5
+  animationDelay: 60
 --- !u!50 &1744922447469309591
 Rigidbody2D:
   serializedVersion: 4
