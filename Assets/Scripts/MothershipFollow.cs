@@ -11,23 +11,23 @@ public class MothershipFollow : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public float distance = 5;
+    public float maxDistance = 5;
     public float moveSpeed = 5;
 
     void FixedUpdate()
     {
-        if (UFO.transform.position.y - gameObject.transform.position.y > distance)
+        if (UFO.transform.position.y - gameObject.transform.position.y > maxDistance) //Sets the MotherShip to move upwards at moveSpeed if the difference in y positions between the player and mother ship is greater than the distance
         {
             rb.velocity = new Vector2(0, moveSpeed);
 
-    }
-        else if (UFO.transform.position.y - gameObject.transform.position.y < -distance)
+        }
+        else if (UFO.transform.position.y - gameObject.transform.position.y < -maxDistance) //Sets the MotherShip to move downwards at moveSpeed if the difference in y positions between the player and mother ship is less than the negative distance
         {
             rb.velocity = new Vector2(0, -moveSpeed);
-    }
-        else
+        }
+        else //Stops mothership movement if the mother ship is within range of the player
         {
-            rb.velocity = new Vector2(0,0);
+            rb.velocity = new Vector2(0, 0);
         }
     }
 }
