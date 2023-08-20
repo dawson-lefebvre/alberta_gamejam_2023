@@ -8,6 +8,9 @@ public class PlayerBehaviour : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField]GameObject beam; //Reference to the tractor beam object which is a child of the player
 
+    [SerializeField] AudioSource beamFXSource;
+    [SerializeField] AudioSource hoverFXSource;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -17,6 +20,13 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        beamFXSource.loop = true;
+        hoverFXSource.loop = true;
+        beamFXSource.Play();
+        hoverFXSource.Play();
+        beamFXSource.Pause();
+        hoverFXSource.Pause();
     }
 
     //To initalize the controls
@@ -36,10 +46,12 @@ public class PlayerBehaviour : MonoBehaviour
         if (playerControls.Player.Tract.IsPressed())
         {
             beam.SetActive(true);
+            beamFXSource.UnPause();
         }
         else if(beam.activeInHierarchy)
         {
             beam.SetActive(false);
+            beamFXSource.Pause();
         }
     }
 
@@ -51,11 +63,13 @@ public class PlayerBehaviour : MonoBehaviour
         if(playerControls.Player.Move.ReadValue<Vector2>() != Vector2.zero) //If the move value from input is not zero, adds force to the player with the acceleration value
         {
             rb.AddForce(playerControls.Player.Move.ReadValue<Vector2>() * acceleration);
+            hoverFXSource.UnPause();
 
         }
         else //If the movement value is zero, a force with the acceleration force is applied negative to the velocity to slow it down
         {
             rb.AddForce(-rb.velocity.normalized *  acceleration);
+            hoverFXSource.Pause();
         }
 
         //Speed limiter
